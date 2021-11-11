@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".progressAndBar.CircleProgressActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.triggertrap.seekarc.SeekArc
+                            android:id="@+id/seekArkId"
+                            android:layout_width="220dp"
+                            android:layout_height="200dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:padding="20dp"
+                            app:arcWidth="20dp"
+                            app:progressColor="#005700"
+                            app:progressWidth="20dp"
+                            app:startAngle="260"
+                            app:sweepAngle="200"
+                            app:touchInside="false" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/seekArkId"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="65dp"
+                            android:text="100%"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/circularProgressBar"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        app:cpb_background_progressbar_color="#DDDDDD"
+                        app:cpb_background_progressbar_width="20dp"
+                        app:cpb_progress="10"
+                        app:cpb_progress_direction="to_right"
+                        app:cpb_progressbar_color_direction="left_to_right"
+                        app:cpb_progressbar_color_end="#00BC19"
+                        app:cpb_progressbar_color_start="#FF0000"
+                        app:cpb_progressbar_width="20dp"
+                        app:cpb_round_border="false"
+                        app:cpb_start_angle="270" />
+
+                    <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                        android:id="@+id/circular_progress"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:direction="clockwise"
+                        app:dotColor="?colorPrimary"
+                        app:dotWidth="16dp"
+                        app:drawDot="true"
+                        app:enableProgressAnimation="true"
+                        app:fillBackground="false"
+                        app:progressBackgroundColor="#D6D6D6"
+                        app:progressBackgroundStrokeWidth="16dp"
+                        app:progressCap="butt"
+                        app:progressColor="?colorPrimary"
+                        app:progressStrokeWidth="16dp"
+                        app:startAngle="180"
+                        app:textColor="#000920"
+                        app:textSize="14sp" />
+
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/half_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp" />
+
+
+                    <me.bastanfar.semicirclearcprogressbar.SemiCircleArcProgressBar
+                        android:layout_width="250dp"
+                        android:layout_height="125dp"
+                        android:layout_gravity="center"
+                        app:percent="10"
+                        app:progressBarColor="#00FF7B"
+                        app:progressBarWidth="60"
+                        app:progressPlaceHolderColor="#ECECEC"
+                        app:progressPlaceHolderWidth="60" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/gauge1"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_centerHorizontal="true"
+                            app:gaugeDividerColor="#FFD600"
+                            app:gaugeDividerDrawFirst="false"
+                            app:gaugeDividerDrawLast="true"
+                            app:gaugeDividerSize="1"
+                            app:gaugeDividerStep="10"
+                            app:gaugeEndValue="150"
+                            app:gaugePointEndColor="#00BC19"
+                            app:gaugePointStartColor="#FF0000"
+                            app:gaugeStartAngle="170"
+                            app:gaugeStartValue="0"
+                            app:gaugeStrokeCap="BUTT"
+                            app:gaugeStrokeColor="#E3E3E3"
+                            app:gaugeStrokeWidth="20dp"
+                            app:gaugeSweepAngle="200" />
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/gauge1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="65dp"
+                            android:text="100%"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

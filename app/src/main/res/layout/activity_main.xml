@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/drawerWithToolbarId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="8dp"
+        android:background="@color/teal_700"
+        app:background="?attr/selectableItemBackgroundBorderless"
+        android:text="Navigation Drawer with toolbar"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/circleProgressTvId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="8dp"
+        android:background="@color/teal_700"
+        app:background="?attr/selectableItemBackgroundBorderless"
+        android:text="Circle ProgressBar"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/posTvId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="8dp"
+        android:background="@color/teal_700"
+        app:background="?attr/selectableItemBackgroundBorderless"
+        android:text="Pos Page"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="8dp"
+        android:background="@color/teal_700"
+        app:background="?attr/selectableItemBackgroundBorderless"
+        android:text="Implemented Next"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="8dp"
+        android:background="@color/teal_700"
+        app:background="?attr/selectableItemBackgroundBorderless"
+        android:text="Implemented Next"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="8dp"
+        android:background="@color/teal_700"
+        app:background="?attr/selectableItemBackgroundBorderless"
+        android:text="Implemented Next"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="8dp"
+        android:background="@color/teal_700"
+        app:background="?attr/selectableItemBackgroundBorderless"
+        android:text="Implemented Next"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="8dp"
+        android:background="@color/teal_700"
+        app:background="?attr/selectableItemBackgroundBorderless"
+        android:text="Implemented Next"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+</LinearLayout>
