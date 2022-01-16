@@ -8,10 +8,11 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.differentuitest.progressAndBar.CircleProgressActivity;
+import com.example.differentuitest.recyclerView.AddShowActivity;
 import com.example.differentuitest.toolbar.NavigationDrawerWithToolbarActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView drawerWithToolbar, circleProgress, posTv;
+    TextView drawerWithToolbar, circleProgress, posTv, saModuleTv, roomCRUD;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +22,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         drawerWithToolbar = findViewById(R.id.drawerWithToolbarId);
         circleProgress = findViewById(R.id.circleProgressTvId);
         posTv = findViewById(R.id.posTvId);
+        saModuleTv = findViewById(R.id.saModuleTvId);
+        roomCRUD = findViewById(R.id.roomCRUDId);
 
 
         drawerWithToolbar.setOnClickListener(this);
         circleProgress.setOnClickListener(this);
         posTv.setOnClickListener(this);
+        saModuleTv.setOnClickListener(this);
+        roomCRUD.setOnClickListener(this);
 
     }
 
@@ -40,6 +45,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (v.getId() == R.id.posTvId) {
             startActivity(new Intent(this, PosActivity.class));
+        }
+        if (v.getId() == R.id.saModuleTvId) {
+            startActivity(new Intent(this, SalesDemoActivity.class));
+        }
+        if (v.getId() == R.id.roomCRUDId) {
+            startActivity(new Intent(this, AddShowActivity.class));
         }
     }
 }

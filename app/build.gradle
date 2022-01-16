@@ -3,13 +3,17 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 32
     buildToolsVersion "30.0.3"
 
     defaultConfig {
+        configurations.all {
+            resolutionStrategy { force 'androidx.core:core:1.6.0' }
+        }
+
         applicationId "com.example.differentuitest"
         minSdkVersion 19
-        targetSdkVersion 30
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
@@ -47,5 +51,13 @@ dependencies {
     implementation 'com.github.hadibtf:SemiCircleArcProgressBar:1.1.1'
     implementation 'pl.pawelkleczkowski.customgauge:CustomGauge:1.0.4'
 
+    //cart quantity plus minus
     implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
+
+    //room components
+    def room_version = "2.2.2"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    testImplementation "androidx.room:room-testing:$room_version"
 }

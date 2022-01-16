@@ -11,12 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DifferentUITest"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".PosActivity"></activity>
+        <activity android:name=".recyclerView.RecyclerRoomActivity"></activity>
+        <activity android:name=".recyclerView.AddShowActivity" />
+        <activity android:name=".SalesDemoActivity" />
+        <activity android:name=".PosActivity" />
         <activity android:name=".progressAndBar.CircleProgressActivity" />
         <activity
             android:name=".toolbar.NavigationDrawerWithToolbarActivity"
-            android:theme="@style/MyAppTheme"></activity>
-        <activity android:name=".MainActivity">
+            android:theme="@style/MyAppTheme" />
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
