@@ -3,117 +3,151 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/drawerWithToolbarId"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:padding="8dp"
-        android:background="@color/teal_700"
-        app:background="?attr/selectableItemBackgroundBorderless"
-        android:text="Navigation Drawer with toolbar"
-        android:textColor="@color/white"
-        android:textSize="17sp"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/circleProgressTvId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:padding="8dp"
-        android:background="@color/teal_700"
-        app:background="?attr/selectableItemBackgroundBorderless"
-        android:text="Circle ProgressBar"
-        android:textColor="@color/white"
-        android:textSize="17sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/posTvId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:padding="8dp"
-        android:background="@color/teal_700"
-        app:background="?attr/selectableItemBackgroundBorderless"
-        android:text="Pos Page"
-        android:textColor="@color/white"
-        android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/drawerWithToolbarId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/teal_700"
+                android:padding="8dp"
+                android:text="@string/nav_drawer_toolbar"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:background="?attr/selectableItemBackgroundBorderless" />
 
-    <TextView
-        android:id="@+id/saModuleTvId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:padding="8dp"
-        android:background="@color/teal_700"
-        app:background="?attr/selectableItemBackgroundBorderless"
-        android:text="Sales Assistant Module"
-        android:textColor="@color/white"
-        android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/circleProgressTvId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/teal_700"
+                android:padding="8dp"
+                android:text="@string/circle_progressbar"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:background="?attr/selectableItemBackgroundBorderless" />
 
-    <TextView
-        android:id="@+id/roomCRUDId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:padding="8dp"
-        android:background="@color/teal_700"
-        app:background="?attr/selectableItemBackgroundBorderless"
-        android:text="Room CRUD"
-        android:textColor="@color/white"
-        android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/posTvId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/teal_700"
+                android:padding="8dp"
+                android:text="@string/pos_page"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:background="?attr/selectableItemBackgroundBorderless" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:padding="8dp"
-        android:background="@color/teal_700"
-        app:background="?attr/selectableItemBackgroundBorderless"
-        android:text="Implemented Next"
-        android:textColor="@color/white"
-        android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/saModuleTvId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/teal_700"
+                android:padding="8dp"
+                android:text="@string/sa_module"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:background="?attr/selectableItemBackgroundBorderless" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:padding="8dp"
-        android:background="@color/teal_700"
-        app:background="?attr/selectableItemBackgroundBorderless"
-        android:text="Implemented Next"
-        android:textColor="@color/white"
-        android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/roomCRUDId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/teal_700"
+                android:padding="8dp"
+                android:text="@string/room_crud"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:background="?attr/selectableItemBackgroundBorderless" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:padding="8dp"
-        android:background="@color/teal_700"
-        app:background="?attr/selectableItemBackgroundBorderless"
-        android:text="Implemented Next"
-        android:textColor="@color/white"
-        android:textSize="17sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/teal_700"
+                android:padding="8dp"
+                android:text="@string/implemented_next"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:background="?attr/selectableItemBackgroundBorderless" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/teal_700"
+                android:padding="8dp"
+                android:text="@string/implemented_next"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:background="?attr/selectableItemBackgroundBorderless" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/teal_700"
+                android:padding="8dp"
+                android:text="@string/implemented_next"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:background="?attr/selectableItemBackgroundBorderless" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/setLangBangla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Bangla" />
+
+        <Button
+            android:id="@+id/setLangEnglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="English"
+            android:visibility="gone" />
+
+    </RelativeLayout>
 
 </LinearLayout>

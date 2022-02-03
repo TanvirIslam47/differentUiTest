@@ -3,5 +3,12 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
 
+    <string name="nav_drawer_toolbar">Navigation Drawer with toolbar</string>
+    <string name="circle_progressbar">Circle ProgressBar</string>
+    <string name="pos_page">Pos Page</string>
+    <string name="sa_module">Sales Assistant Module</string>
+    <string name="room_crud">Room CRUD</string>
+    <string name="implemented_next">Implemented Next</string>
+
 
 </resources>
