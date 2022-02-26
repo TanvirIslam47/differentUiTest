@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.differentuitest">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,8 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DifferentUITest"
-        tools:replace="android:icon,android:theme">
-        <activity android:name=".recyclerView.RecyclerRoomActivity"></activity>
+        tools:replace="android:icon,android:theme"
+        android:name=".application.PrintApplicationClass"
+        >
+        <activity android:name=".PosPrintActivity"/>
+        <activity android:name=".recyclerView.RecyclerRoomActivity" />
         <activity android:name=".recyclerView.AddShowActivity" />
         <activity android:name=".SalesDemoActivity" />
         <activity android:name=".PosActivity" />
@@ -19,7 +28,8 @@
         <activity
             android:name=".toolbar.NavigationDrawerWithToolbarActivity"
             android:theme="@style/MyAppTheme" />
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
