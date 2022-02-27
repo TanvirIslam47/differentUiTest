@@ -9,6 +9,7 @@
     <string name="sa_module">Sales Assistant Module</string>
     <string name="room_crud">Room CRUD</string>
     <string name="pos_print">Pos Print</string>
+    <string name="login">Log In</string>
     <string name="implemented_next">Implemented Next</string>
 
 

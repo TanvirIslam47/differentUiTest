@@ -6,5 +6,6 @@
     <string name="sa_module">বিক্রয় সহকারী মডুল</string>
     <string name="room_crud">রুম ক্রুড</string>
     <string name="pos_print">পয প্রিন্ট</string>
+    <string name="login">Log In</string>
     <string name="implemented_next">পরবর্তীতে ব্যবহার হবে</string>
 </resources>

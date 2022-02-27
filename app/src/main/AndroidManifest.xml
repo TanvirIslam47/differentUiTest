@@ -6,20 +6,21 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
 
     <application
+        android:name=".application.PrintApplicationClass"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DifferentUITest"
-        tools:replace="android:icon,android:theme"
-        android:name=".application.PrintApplicationClass"
-        >
-        <activity android:name=".PosPrintActivity"/>
+        tools:replace="android:icon,android:theme">
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"/>
+        <activity android:name=".PosPrintActivity" />
         <activity android:name=".recyclerView.RecyclerRoomActivity" />
         <activity android:name=".recyclerView.AddShowActivity" />
         <activity android:name=".SalesDemoActivity" />
