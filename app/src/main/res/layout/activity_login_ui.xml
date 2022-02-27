@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginUiActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/login1Id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/teal_700"
+                android:padding="8dp"
+                android:text="Log in 1"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:background="?attr/selectableItemBackgroundBorderless" />
+
+            <TextView
+                android:id="@+id/login2Id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/teal_700"
+                android:padding="8dp"
+                android:text="Log in 2"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:background="?attr/selectableItemBackgroundBorderless" />
+
+            <TextView
+                android:id="@+id/login3Id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/teal_700"
+                android:padding="8dp"
+                android:text="Log in 3"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:background="?attr/selectableItemBackgroundBorderless" />
+
+            <TextView
+                android:id="@+id/login4Id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/teal_700"
+                android:padding="8dp"
+                android:text="Log in 4"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:background="?attr/selectableItemBackgroundBorderless" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

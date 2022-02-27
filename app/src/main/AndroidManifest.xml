@@ -17,9 +17,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DifferentUITest"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".LoginActivity"
+        <activity android:name=".login.LoginActivity2"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme"/>
+        <activity android:name=".login.LoginUiActivity" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
         <activity android:name=".PosPrintActivity" />
         <activity android:name=".recyclerView.RecyclerRoomActivity" />
         <activity android:name=".recyclerView.AddShowActivity" />

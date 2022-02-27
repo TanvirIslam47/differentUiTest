@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.differentuitest.helper.LocalHelper;
+import com.example.differentuitest.login.LoginUiActivity;
 import com.example.differentuitest.progressAndBar.CircleProgressActivity;
 import com.example.differentuitest.recyclerView.AddShowActivity;
 import com.example.differentuitest.toolbar.NavigationDrawerWithToolbarActivity;
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, PosPrintActivity.class));
         }
         if (v.getId() == R.id.loginTV) {
-            startActivity(new Intent(this, LoginActivity.class));
+            startActivity(new Intent(this, LoginUiActivity.class));
         }
 
         if (v.getId() == R.id.setLangEnglish) {

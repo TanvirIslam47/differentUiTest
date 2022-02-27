@@ -1,8 +1,10 @@
-package com.example.differentuitest;
+package com.example.differentuitest.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.differentuitest.R;
 
 public class LoginActivity extends AppCompatActivity {
 
