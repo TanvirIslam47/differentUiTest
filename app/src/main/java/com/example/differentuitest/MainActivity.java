@@ -17,7 +17,7 @@ import com.example.differentuitest.recyclerView.AddShowActivity;
 import com.example.differentuitest.toolbar.NavigationDrawerWithToolbarActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView drawerWithToolbar, circleProgress, posTv, saModuleTv, roomCRUD, posPrint, loginTV;
+    TextView drawerWithToolbar, circleProgress, posTv, saModuleTv, roomCRUD, posPrint, loginTV, saTv;
     Button btnBangla, btnEnglish;
     Context context;
     Resources resources;
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         roomCRUD = findViewById(R.id.roomCRUDId);
         posPrint = findViewById(R.id.posPrintId);
         loginTV = findViewById(R.id.loginTV);
+        saTv = findViewById(R.id.saTvId);
         btnBangla = findViewById(R.id.setLangBangla);
         btnEnglish = findViewById(R.id.setLangEnglish);
 
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         roomCRUD.setOnClickListener(this);
         posPrint.setOnClickListener(this);
         loginTV.setOnClickListener(this);
+        saTv.setOnClickListener(this);
 
         btnBangla.setOnClickListener(this);
         btnEnglish.setOnClickListener(this);
@@ -74,6 +76,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (v.getId() == R.id.loginTV) {
             startActivity(new Intent(this, LoginUiActivity.class));
+        }
+        if (v.getId() == R.id.saTvId) {
+            startActivity(new Intent(this, SaTestActivity.class));
         }
 
         if (v.getId() == R.id.setLangEnglish) {

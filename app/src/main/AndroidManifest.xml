@@ -17,9 +17,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DifferentUITest"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".login.LoginActivity2"
+        <activity android:name=".SaTestActivity"></activity>
+        <activity
+            android:name=".login.LoginActivity2"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme"/>
+            android:theme="@style/SplashTheme" />
         <activity android:name=".login.LoginUiActivity" />
         <activity
             android:name=".login.LoginActivity"
