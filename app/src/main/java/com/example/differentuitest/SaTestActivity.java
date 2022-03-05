@@ -9,7 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 public class SaTestActivity extends AppCompatActivity {
-    TextView msgText, problem1;
+    TextView msgText, msgText1, problem1;
 
     Animation blinkAnim;
 
@@ -21,6 +21,8 @@ public class SaTestActivity extends AppCompatActivity {
         problem1 = findViewById(R.id.problem1Id);
         msgText = findViewById(R.id.mdMSGId);
         msgText.setSelected(true);
+        msgText1 = findViewById(R.id.mdMSG1Id);
+        msgText1.setSelected(true);
 
         blinkAnim = AnimationUtils.loadAnimation(this, R.anim.blink);
 //        blinkAnim.setAnimationListener(new Animation.AnimationListener() {

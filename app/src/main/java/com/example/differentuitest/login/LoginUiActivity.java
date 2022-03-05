@@ -39,5 +39,8 @@ public class LoginUiActivity extends AppCompatActivity implements View.OnClickLi
         if (view.getId() == R.id.login2Id) {
             startActivity(new Intent(this, LoginActivity2.class));
         }
+        if (view.getId() == R.id.login3Id) {
+            startActivity(new Intent(this, LoginActivity3.class));
+        }
     }
 }

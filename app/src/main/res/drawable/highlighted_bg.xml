@@ -7,8 +7,8 @@
                 android:angle="45"
                 android:centerX="70%"
                 android:centerColor="#ED1A37"
-                android:startColor="#830F0F"
-                android:endColor="#F41B39"
+                android:startColor="#981313"
+                android:endColor="#FF2442"
                 android:type="linear"
                 />
             <corners android:radius="10dp"/>
