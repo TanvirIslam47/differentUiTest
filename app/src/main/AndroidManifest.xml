@@ -7,13 +7,12 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".application.PrintApplicationClass"
@@ -24,10 +23,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DifferentUITest"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".login.RegisterActivity3"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".login.LoginActivity3"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".partnerlistRecyclerView.PartnerListRViewActivity"></activity>
+        <activity
+            android:name=".login.RegisterActivity3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".login.LoginActivity3"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SaTestActivity" />
         <activity
             android:name=".login.LoginActivity2"
