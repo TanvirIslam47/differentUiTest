@@ -1,6 +1,7 @@
 package com.example.differentuitest.partnerlistRecyclerView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import com.example.differentuitest.R;
 import com.example.differentuitest.api.BaseApiService;
 import com.example.differentuitest.api.UtilsApi;
+import com.github.ybq.android.spinkit.SpinKitView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -35,27 +37,50 @@ public class PartnerListRViewActivity extends AppCompatActivity {
     SharedPreferences settings;
     String access_token;
     List<PartnerListRVModel> modelPartnerList = new ArrayList<>();
+    SpinKitView progress;
+    NestedScrollView nestedScrollView;
 
     BaseApiService mApiService;
     Boolean stat;
+    int offset = 0, limit = 200;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_partner_list_rview);
 
+        progress = findViewById(R.id.spin_kit);
+        nestedScrollView = findViewById(R.id.scroll_viewId);
+
         mApiService = UtilsApi.getAPIService();
         settings = getSharedPreferences(PREFS_NAME, 0);
 
-        partnerList();
+        progress.setVisibility(View.VISIBLE);
+        partnerList(offset, limit);
+
+        nestedScrollView.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                //check condition
+                if(scrollY == v.getChildAt(0).getMeasuredHeight() - v.getMeasuredHeight()) {
+                    //when reach last item position
+                    //increase offset
+                    offset = offset + 500;
+                    //show progress bar
+                    progress.setVisibility(View.VISIBLE);
+                    //call method
+                    partnerList(offset, limit);
+                }
+            }
+        });
 
     }
 
 
-    private void partnerList() {
+    private void partnerList(int offset, int limit) {
         access_token = settings.getString("access_token", "");
-        int offset = 0;
-        int limit = 6000;
+//        int offset = 0;
+//        int limit = 6000;
 
         mApiService.partnerList(access_token, offset, limit).enqueue(new Callback<ResponseBody>() {
             @Override
@@ -65,6 +90,7 @@ public class PartnerListRViewActivity extends AppCompatActivity {
                         JSONObject jsonObject = new JSONObject(response.body().string());
                         stat = (Boolean) jsonObject.get("status");
                         if (stat) {
+                            progress.setVisibility(View.GONE);
                             JSONArray jsonArray = jsonObject.getJSONArray("results");
 
                             for (int i = 0; i < jsonArray.length(); i++) {

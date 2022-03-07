@@ -4,14 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 public class SaTestActivity extends AppCompatActivity {
     TextView msgText, msgText1, problem1;
 
     Animation blinkAnim;
+
+    ExtendedFloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,26 @@ public class SaTestActivity extends AppCompatActivity {
         msgText.setSelected(true);
         msgText1 = findViewById(R.id.mdMSG1Id);
         msgText1.setSelected(true);
+        fab = findViewById(R.id.extended_fab);
+
+        fab.shrink();
+
+        View.OnClickListener clickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ExtendedFloatingActionButton extFab = (ExtendedFloatingActionButton) view;
+                if(extFab.isExtended())
+                {
+                    extFab.shrink();
+                }
+                else {
+                    extFab.extend();
+                }
+            }
+        };
+
+        fab.setOnClickListener(clickListener);
+
 
         blinkAnim = AnimationUtils.loadAnimation(this, R.anim.blink);
 //        blinkAnim.setAnimationListener(new Animation.AnimationListener() {
