@@ -31,22 +31,33 @@ public class SaTestActivity extends AppCompatActivity {
         fab = findViewById(R.id.extended_fab);
 
         fab.shrink();
-
-        View.OnClickListener clickListener = new View.OnClickListener() {
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ExtendedFloatingActionButton extFab = (ExtendedFloatingActionButton) view;
-                if(extFab.isExtended())
-                {
-                    extFab.shrink();
+                if(fab.isExtended()) {
+                    fab.shrink();
                 }
                 else {
-                    extFab.extend();
+                    fab.extend();
                 }
             }
-        };
+        });
 
-        fab.setOnClickListener(clickListener);
+//        View.OnClickListener clickListener = new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ExtendedFloatingActionButton extFab = (ExtendedFloatingActionButton) view;
+//                if(extFab.isExtended())
+//                {
+//                    extFab.shrink();
+//                }
+//                else {
+//                    extFab.extend();
+//                }
+//            }
+//        };
+//
+//        fab.setOnClickListener(clickListener);
 
 
         blinkAnim = AnimationUtils.loadAnimation(this, R.anim.blink);

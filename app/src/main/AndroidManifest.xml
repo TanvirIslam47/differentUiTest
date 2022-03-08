@@ -23,7 +23,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DifferentUITest"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".partnerlistRecyclerView.PartnerListRViewActivity"></activity>
+        <activity android:name=".login.LoginActivity4"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".partnerlistRecyclerView.PartnerListRViewActivity" />
         <activity
             android:name=".login.RegisterActivity3"
             android:theme="@style/AppTheme.NoActionBar" />
