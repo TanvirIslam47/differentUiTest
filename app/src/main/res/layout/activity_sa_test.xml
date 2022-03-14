@@ -17,36 +17,35 @@
             android:layout_height="0dp"
             android:layout_weight="9.1">
 
-<!--            <com.example.differentuitest.lib.MovableFloatingActionButton-->
-<!--                android:id="@+id/movable_fab"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="25dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="Previous Month"-->
-<!--                android:textColor="@color/white"-->
-<!--                app:icon="@drawable/back_fab2"-->
-<!--                app:iconTint="@color/white"-->
-<!--                app:backgroundTint="#B2DA0505"-->
-<!--                app:rippleColor="@color/md_red_900"-->
-<!--                />-->
+            <!--            <com.example.differentuitest.lib.MovableFloatingActionButton-->
+            <!--                android:id="@+id/movable_fab"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_margin="25dp"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="Previous Month"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                app:icon="@drawable/back_fab2"-->
+            <!--                app:iconTint="@color/white"-->
+            <!--                app:backgroundTint="#B2DA0505"-->
+            <!--                app:rippleColor="@color/md_red_900"-->
+            <!--                />-->
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:id="@+id/extended_fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="30dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="30dp"
                 android:gravity="center"
                 android:text="Previous Month"
                 android:textColor="@color/white"
+                app:backgroundTint="#B2DA0505"
                 app:icon="@drawable/back_fab2"
                 app:iconTint="@color/white"
-                app:backgroundTint="#B2DA0505"
-                app:rippleColor="@color/md_red_900"
-                />
+                app:rippleColor="@color/md_red_900" />
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -530,13 +529,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:ellipsize="marquee"
-                                android:singleLine="true"
-                                android:focusable="true"
                                 android:clickable="true"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
                                 android:focusableInTouchMode="true"
                                 android:marqueeRepeatLimit="marquee_forever"
                                 android:scrollHorizontally="true"
+                                android:singleLine="true"
                                 android:text="সবাইকে ঈদুল ফিতরের অনেক অনেক শুভেচ্ছা। সবাই ভালোভাবে ঈদ উদযাপন করো"
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
@@ -708,16 +707,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
-                            android:weightSum="8"
                             android:paddingTop="5dp"
-                            android:paddingBottom="5dp">
+                            android:paddingBottom="5dp"
+                            android:weightSum="8">
 
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
                                 android:layout_weight="2"
                                 android:background="@drawable/layout_bg_1"
-                                android:layout_gravity="center"
                                 android:gravity="center"
                                 android:text="Special Note"
                                 android:textColor="@color/md_red_800"
@@ -728,13 +727,13 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="6"
-                                android:ellipsize="marquee"
-                                android:singleLine="true"
-                                android:focusable="true"
                                 android:clickable="true"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
                                 android:focusableInTouchMode="true"
                                 android:marqueeRepeatLimit="marquee_forever"
                                 android:scrollHorizontally="true"
+                                android:singleLine="true"
                                 android:text="সবাইকে ঈদুল ফিতরের অনেক অনেক শুভেচ্ছা। সবাই ভালোভাবে ঈদ উদযাপন করো"
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
