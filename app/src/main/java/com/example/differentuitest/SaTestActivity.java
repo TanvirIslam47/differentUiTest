@@ -9,6 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
+import com.example.differentuitest.lib.MovableFloatingActionButton;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 public class SaTestActivity extends AppCompatActivity {
@@ -17,6 +18,7 @@ public class SaTestActivity extends AppCompatActivity {
     Animation blinkAnim;
 
     ExtendedFloatingActionButton fab;
+//    MovableFloatingActionButton m_fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class SaTestActivity extends AppCompatActivity {
         msgText1 = findViewById(R.id.mdMSG1Id);
         msgText1.setSelected(true);
         fab = findViewById(R.id.extended_fab);
+//        m_fab = findViewById(R.id.movable_fab);
 
         fab.shrink();
         fab.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +61,19 @@ public class SaTestActivity extends AppCompatActivity {
 //        };
 //
 //        fab.setOnClickListener(clickListener);
+
+//        //MovableFloatingActionButton listener
+//        m_fab.shrink();
+//        m_fab.setOnClickListener(view -> {
+//
+//            if(m_fab.isExtended()) {
+//                m_fab.shrink();
+//            }
+//            else {
+//                m_fab.extend();
+//            }
+//
+//        });
 
 
         blinkAnim = AnimationUtils.loadAnimation(this, R.anim.blink);
