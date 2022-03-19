@@ -65,7 +65,7 @@ public class PartnerListRViewActivity extends AppCompatActivity {
                 if(scrollY == v.getChildAt(0).getMeasuredHeight() - v.getMeasuredHeight()) {
                     //when reach last item position
                     //increase offset
-                    offset = offset + 500;
+                    offset = offset + 200;
                     //show progress bar
                     progress.setVisibility(View.VISIBLE);
                     //call method
