@@ -4,6 +4,7 @@
     <string name="close">Close</string>
 
     <string name="nav_drawer_toolbar">Navigation Drawer with toolbar</string>
+    <string name="bottom_navigation">Bottom NavigationBar</string>
     <string name="circle_progressbar">Circle ProgressBar</string>
     <string name="pos_page">Pos Page</string>
     <string name="sa_module">Sales Assistant Module</string>

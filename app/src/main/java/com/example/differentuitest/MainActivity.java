@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.differentuitest.bottomNavigation.BottomNavigationUiListActivity;
+import com.example.differentuitest.bottomNavigation.SmoothBottomNavigationActivity;
 import com.example.differentuitest.helper.LocalHelper;
 import com.example.differentuitest.login.LoginUiActivity;
 import com.example.differentuitest.progressAndBar.CircleProgressActivity;
@@ -17,7 +19,8 @@ import com.example.differentuitest.recyclerView.AddShowActivity;
 import com.example.differentuitest.toolbar.NavigationDrawerWithToolbarActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView drawerWithToolbar, circleProgress, posTv, saModuleTv, roomCRUD, posPrint, loginTV, saTv, mapsTv;
+    TextView drawerWithToolbar, bottomNavigation, circleProgress, posTv,
+            saModuleTv, roomCRUD, posPrint, loginTV, saTv, mapsTv;
     Button btnBangla, btnEnglish;
     Context context;
     Resources resources;
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         drawerWithToolbar = findViewById(R.id.drawerWithToolbarId);
+        bottomNavigation = findViewById(R.id.bottomNavigationId);
         circleProgress = findViewById(R.id.circleProgressTvId);
         posTv = findViewById(R.id.posTvId);
         saModuleTv = findViewById(R.id.saModuleTvId);
@@ -41,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         drawerWithToolbar.setOnClickListener(this);
+        bottomNavigation.setOnClickListener(this);
         circleProgress.setOnClickListener(this);
         posTv.setOnClickListener(this);
         saModuleTv.setOnClickListener(this);
@@ -60,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (v.getId() == R.id.drawerWithToolbarId) {
             startActivity(new Intent(this, NavigationDrawerWithToolbarActivity.class));
+        }
+        if (v.getId() == R.id.bottomNavigationId) {
+            startActivity(new Intent(this, BottomNavigationUiListActivity.class));
         }
         if (v.getId() == R.id.circleProgressTvId) {
             startActivity(new Intent(this, CircleProgressActivity.class));

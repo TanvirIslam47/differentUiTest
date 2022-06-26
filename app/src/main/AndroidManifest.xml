@@ -2,13 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.differentuitest">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
@@ -28,7 +28,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DifferentUITest"
         tools:replace="android:icon,android:theme">
-
+        <activity android:name=".bottomNavigation.MaterialBottomNavActivity"></activity>
+        <activity android:name=".bottomNavigation.BottomNavigationUiListActivity" />
+        <activity android:name=".bottomNavigation.SmoothBottomNavigationActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -43,7 +45,7 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
         <activity
             android:name=".login.LoginActivity4"
             android:theme="@style/AppTheme.NoActionBar" />

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="nav_drawer_toolbar">ন্যাভিগেশন ড্রয়ার ও টুলবার</string>
+    <string name="bottom_navigation">নিচের নেভিগেশন বার</string>
     <string name="circle_progressbar">বৃত্তাকার প্রোগ্রেসবার</string>
     <string name="pos_page">পয পেজ</string>
     <string name="sa_module">বিক্রয় সহকারী মডুল</string>
