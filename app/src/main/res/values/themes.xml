@@ -79,4 +79,10 @@
         <item name="android:paddingLeft">5dp</item>
     </style>
 
+    <style name="CustomChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_bg_color</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="rippleColor">#14FFFFFF</item>
+    </style>
+
 </resources>

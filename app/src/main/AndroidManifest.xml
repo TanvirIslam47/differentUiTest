@@ -28,7 +28,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DifferentUITest"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".bottomNavigation.MaterialBottomNavActivity"></activity>
+        <activity android:name=".CartActivity"></activity>
+        <activity android:name=".bottomNavigation.MaterialBottomNavActivity" />
         <activity android:name=".bottomNavigation.BottomNavigationUiListActivity" />
         <activity android:name=".bottomNavigation.SmoothBottomNavigationActivity" />
         <!--
