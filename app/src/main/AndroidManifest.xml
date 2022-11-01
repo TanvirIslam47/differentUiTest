@@ -14,10 +14,13 @@
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<!--    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />-->
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <application
         android:name=".application.PrintApplicationClass"
@@ -28,7 +31,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DifferentUITest"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".CartActivity"></activity>
+        <activity android:name=".DeviceActivity">
+
+        </activity>
+        <activity android:name=".CartActivity" />
         <activity android:name=".bottomNavigation.MaterialBottomNavActivity" />
         <activity android:name=".bottomNavigation.BottomNavigationUiListActivity" />
         <activity android:name=".bottomNavigation.SmoothBottomNavigationActivity" />

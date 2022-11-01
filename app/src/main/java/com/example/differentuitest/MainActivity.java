@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.differentuitest.bottomNavigation.BottomNavigationUiListActivity;
 import com.example.differentuitest.bottomNavigation.SmoothBottomNavigationActivity;
@@ -20,10 +21,13 @@ import com.example.differentuitest.toolbar.NavigationDrawerWithToolbarActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView drawerWithToolbar, bottomNavigation, circleProgress, posTv,
-            saModuleTv, roomCRUD, posPrint, loginTV, saTv, mapsTv, cartTv;
+            saModuleTv, roomCRUD, posPrint, loginTV, saTv, mapsTv, cartTv, deviceInfoTv,
+            commaString;
     Button btnBangla, btnEnglish;
     Context context;
     Resources resources;
+
+    String sub = "12,123";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +45,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         saTv = findViewById(R.id.saTvId);
         mapsTv = findViewById(R.id.mapTvId);
         cartTv = findViewById(R.id.cartTvId);
+        deviceInfoTv = findViewById(R.id.deviceInfoTvId);
         btnBangla = findViewById(R.id.setLangBangla);
         btnEnglish = findViewById(R.id.setLangEnglish);
+//        commaString = findViewById(R.id.commaStringId);
+
+//        int amount;
+//        amount = Integer.parseInt(sub.replaceAll(",", ""));
+//        Toast.makeText(this, "value: "+amount, Toast.LENGTH_SHORT).show();
+//        commaString.setText(String.valueOf(amount));
 
 
         drawerWithToolbar.setOnClickListener(this);
@@ -56,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         saTv.setOnClickListener(this);
         mapsTv.setOnClickListener(this);
         cartTv.setOnClickListener(this);
+        deviceInfoTv.setOnClickListener(this);
 
         btnBangla.setOnClickListener(this);
         btnEnglish.setOnClickListener(this);
@@ -97,6 +109,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (v.getId() == R.id.cartTvId) {
             startActivity(new Intent(this, CartActivity.class));
+        }
+        if (v.getId() == R.id.deviceInfoTvId) {
+            startActivity(new Intent(this, DeviceActivity.class));
         }
 
         if (v.getId() == R.id.setLangEnglish) {
