@@ -38,6 +38,17 @@ public class DeviceActivity extends AppCompatActivity {
         textView = findViewById(R.id.tvId);
         displayInfo.setText(getSystemDetail());
 
+//        telephonyManager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
+//        if (ActivityCompat.checkSelfPermission(this, READ_SMS) != PackageManager.PERMISSION_GRANTED &&
+//                ActivityCompat.checkSelfPermission(this, READ_PHONE_NUMBERS) != PackageManager.PERMISSION_GRANTED &&
+//                ActivityCompat.checkSelfPermission(this, READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+//            ActivityCompat.requestPermissions(this, new String[]{READ_SMS, READ_PHONE_NUMBERS, READ_PHONE_STATE}, PERMISSION_REQUEST_CODE);
+//        } else {
+////            textView.setText(""+telephonyManager.getSimSerialNumber());
+//            textView.setText(telephonyManager.getImei());
+//            String phn = (""+telephonyManager.getSimSerialNumber());
+//        }
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -47,16 +58,7 @@ public class DeviceActivity extends AppCompatActivity {
 //        Context context = requireContext().getApplicationContext();
         WifiManager wm = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
-        telephonyManager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
-        if (ActivityCompat.checkSelfPermission(this, READ_SMS) != PackageManager.PERMISSION_GRANTED &&
-                ActivityCompat.checkSelfPermission(this, READ_PHONE_NUMBERS) != PackageManager.PERMISSION_GRANTED &&
-                ActivityCompat.checkSelfPermission(this, READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{READ_SMS, READ_PHONE_NUMBERS, READ_PHONE_STATE}, PERMISSION_REQUEST_CODE);
-        } else {
-//            textView.setText(""+telephonyManager.getSimSerialNumber());
-            textView.setText(telephonyManager.getImei());
-            String phn = (""+telephonyManager.getSimSerialNumber());
-        }
+
 
 //        // device Id
 //        deviceId_str = telephonyManager.getDeviceId();
