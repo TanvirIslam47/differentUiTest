@@ -17,10 +17,11 @@ import com.example.differentuitest.helper.LocalHelper;
 import com.example.differentuitest.login.LoginUiActivity;
 import com.example.differentuitest.progressAndBar.CircleProgressActivity;
 import com.example.differentuitest.recyclerView.AddShowActivity;
+import com.example.differentuitest.toolbar.DrawerWithCustomToggleActivity;
 import com.example.differentuitest.toolbar.NavigationDrawerWithToolbarActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView drawerWithToolbar, bottomNavigation, circleProgress, posTv,
+    TextView drawerWithToolbar, drawerToggle, bottomNavigation, circleProgress, posTv,
             saModuleTv, roomCRUD, posPrint, loginTV, saTv, mapsTv, cartTv, deviceInfoTv,
             commaString;
     Button btnBangla, btnEnglish;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         drawerWithToolbar = findViewById(R.id.drawerWithToolbarId);
+        drawerToggle = findViewById(R.id.drawerToggleId);
         bottomNavigation = findViewById(R.id.bottomNavigationId);
         circleProgress = findViewById(R.id.circleProgressTvId);
         posTv = findViewById(R.id.posTvId);
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         drawerWithToolbar.setOnClickListener(this);
+        drawerToggle.setOnClickListener(this);
         bottomNavigation.setOnClickListener(this);
         circleProgress.setOnClickListener(this);
         posTv.setOnClickListener(this);
@@ -79,6 +82,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (v.getId() == R.id.drawerWithToolbarId) {
             startActivity(new Intent(this, NavigationDrawerWithToolbarActivity.class));
+        }
+        if (v.getId() == R.id.drawerToggleId) {
+            startActivity(new Intent(this, DrawerWithCustomToggleActivity.class));
         }
         if (v.getId() == R.id.bottomNavigationId) {
             startActivity(new Intent(this, BottomNavigationUiListActivity.class));
