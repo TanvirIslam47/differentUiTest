@@ -38,6 +38,7 @@ public class DeviceActivity extends AppCompatActivity {
         textView = findViewById(R.id.tvId);
         displayInfo.setText(getSystemDetail());
 
+
 //        telephonyManager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
 //        if (ActivityCompat.checkSelfPermission(this, READ_SMS) != PackageManager.PERMISSION_GRANTED &&
 //                ActivityCompat.checkSelfPermission(this, READ_PHONE_NUMBERS) != PackageManager.PERMISSION_GRANTED &&
@@ -57,7 +58,7 @@ public class DeviceActivity extends AppCompatActivity {
 
 //        Context context = requireContext().getApplicationContext();
         WifiManager wm = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
-
+        String android_device_id = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
 
 
 //        // device Id
@@ -86,6 +87,7 @@ public class DeviceActivity extends AppCompatActivity {
                 +"Host: "+Build.HOST+"\n"
                 +"Serial: "+Build.SERIAL+"\n"
                 +"Ip Address: "+ Formatter.formatIpAddress(wm.getConnectionInfo().getIpAddress())+"\n"
+                +"Unique Id: "+ android_device_id+"\n"
                 +"\n";
 
     }
