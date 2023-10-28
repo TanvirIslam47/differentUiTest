@@ -31,9 +31,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DifferentUITest"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".toolbar.DrawerWithCustomToggleActivity"
-            android:theme="@style/MyAppTheme"></activity>
-        <activity android:name=".DeviceActivity"></activity>
+        <activity android:name=".ExpandableCardActivity"></activity>
+        <activity
+            android:name=".toolbar.DrawerWithCustomToggleActivity"
+            android:theme="@style/MyAppTheme" />
+        <activity android:name=".DeviceActivity" />
         <activity android:name=".CartActivity" />
         <activity android:name=".bottomNavigation.MaterialBottomNavActivity" />
         <activity android:name=".bottomNavigation.BottomNavigationUiListActivity" />
