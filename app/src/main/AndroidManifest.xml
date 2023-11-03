@@ -31,7 +31,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DifferentUITest"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".ExpandableCardActivity"></activity>
+        <activity android:name=".OCRActivity"></activity>
+        <activity android:name=".ExpandableCardActivity" />
         <activity
             android:name=".toolbar.DrawerWithCustomToggleActivity"
             android:theme="@style/MyAppTheme" />
