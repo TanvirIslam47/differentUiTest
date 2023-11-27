@@ -23,7 +23,7 @@ import com.example.differentuitest.toolbar.NavigationDrawerWithToolbarActivity;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView drawerWithToolbar, drawerToggle, bottomNavigation, circleProgress, posTv,
             saModuleTv, roomCRUD, posPrint, loginTV, saTv, mapsTv, cartTv, deviceInfoTv,
-            commaString;
+            commaString, ocrTv;
     Button btnBangla, btnEnglish;
     Context context;
     Resources resources;
@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         deviceInfoTv = findViewById(R.id.deviceInfoTvId);
         btnBangla = findViewById(R.id.setLangBangla);
         btnEnglish = findViewById(R.id.setLangEnglish);
+        ocrTv = findViewById(R.id.ocrTvId);
 //        commaString = findViewById(R.id.commaStringId);
 
 //        int amount;
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mapsTv.setOnClickListener(this);
         cartTv.setOnClickListener(this);
         deviceInfoTv.setOnClickListener(this);
+        ocrTv.setOnClickListener(this);
 
         btnBangla.setOnClickListener(this);
         btnEnglish.setOnClickListener(this);
@@ -118,6 +120,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (v.getId() == R.id.deviceInfoTvId) {
             startActivity(new Intent(this, DeviceActivity.class));
+        }
+        if (v.getId() == R.id.ocrTvId) {
+            startActivity(new Intent(this, OCRActivity.class));
         }
 
         if (v.getId() == R.id.setLangEnglish) {
