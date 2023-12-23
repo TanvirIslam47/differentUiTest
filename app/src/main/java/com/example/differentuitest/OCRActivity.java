@@ -29,7 +29,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.theartofdev.edmodo.cropper.CropImage;
+//import com.theartofdev.edmodo.cropper.CropImage;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -98,13 +98,13 @@ public class OCRActivity extends AppCompatActivity {
                     if(!checkCameraPermission()) {
                         requestCameraPermission();
                     } else {
-                        pickFromGallery();
+//                        pickFromGallery();
                     }
                 } else if (which == 1) {
                     if (!checkStoragePermission()) {
                         requestStoragePermission();
                     } else {
-                        pickFromGallery();
+//                        pickFromGallery();
                     }
                 }
             }
@@ -151,7 +151,7 @@ public class OCRActivity extends AppCompatActivity {
                     boolean camera_accepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                     boolean writeStorageAccepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
                     if(camera_accepted && writeStorageAccepted) {
-                        pickFromGallery();
+//                        pickFromGallery();
                     } else {
                         Toast.makeText(this, "Please Enable Camera and Storage Permission", Toast.LENGTH_SHORT).show();
                     }
@@ -162,7 +162,7 @@ public class OCRActivity extends AppCompatActivity {
                 if(grantResults.length > 0) {
                     boolean writeStorageAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                     if(writeStorageAccepted) {
-                        pickFromGallery();
+//                        pickFromGallery();
                     } else {
                         Toast.makeText(this, "Please Enable Storage Permission", Toast.LENGTH_SHORT).show();
                     }
@@ -172,23 +172,23 @@ public class OCRActivity extends AppCompatActivity {
         }
     }
 
-    //Here we will pick image from gallery or camera
-    private void pickFromGallery() {
-        CropImage.activity().start(this);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
-            CropImage.ActivityResult result = CropImage.getActivityResult(data);
-            if(resultCode == RESULT_OK) {
-                Uri resultUri = result.getUri();
-                imageView.setImageURI(resultUri);
-
-            }
-        }
-    }
+//    //Here we will pick image from gallery or camera
+//    private void pickFromGallery() {
+//        CropImage.activity().start(this);
+//    }
+//
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if(requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+//            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+//            if(resultCode == RESULT_OK) {
+//                Uri resultUri = result.getUri();
+//                imageView.setImageURI(resultUri);
+//
+//            }
+//        }
+//    }
 
     //for UCrop
 //    @Override

@@ -23,7 +23,7 @@ import com.example.differentuitest.toolbar.NavigationDrawerWithToolbarActivity;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView drawerWithToolbar, drawerToggle, bottomNavigation, circleProgress, posTv,
             saModuleTv, roomCRUD, posPrint, loginTV, saTv, mapsTv, cartTv, deviceInfoTv,
-            commaString, ocrTv;
+            commaString, ocrTv, expandableCardTv;
     Button btnBangla, btnEnglish;
     Context context;
     Resources resources;
@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnBangla = findViewById(R.id.setLangBangla);
         btnEnglish = findViewById(R.id.setLangEnglish);
         ocrTv = findViewById(R.id.ocrTvId);
+        expandableCardTv = findViewById(R.id.expandableCardTvId);
 //        commaString = findViewById(R.id.commaStringId);
 
 //        int amount;
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cartTv.setOnClickListener(this);
         deviceInfoTv.setOnClickListener(this);
         ocrTv.setOnClickListener(this);
+        expandableCardTv.setOnClickListener(this);
 
         btnBangla.setOnClickListener(this);
         btnEnglish.setOnClickListener(this);
@@ -123,6 +125,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (v.getId() == R.id.ocrTvId) {
             startActivity(new Intent(this, OCRActivity.class));
+        }
+        if (v.getId() == R.id.expandableCardTvId) {
+            startActivity(new Intent(this, ExpandableCardActivity.class));
         }
 
         if (v.getId() == R.id.setLangEnglish) {

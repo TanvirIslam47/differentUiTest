@@ -3,14 +3,14 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        gradlePluginPortal()
-        maven { url "https://jitpack.io" }
-        jcenter() // Warning: this repository is going to shut down soon )
-                {
-                    content {
-                        includeModule("com.theartofdev.edmodo","android-image-cropper")
-                    }
-                }
+//        gradlePluginPortal()
+////        maven { url "https://jitpack.io" }
+//        jcenter() // Warning: this repository is going to shut down soon )
+//                {
+//                    content {
+//                        includeModule("com.theartofdev.edmodo","android-image-cropper")
+//                    }
+//                }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.2.1"
@@ -24,14 +24,15 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven { url "https://jitpack.io" }
+
         jcenter() // Warning: this repository is going to shut down soon )
-                {
-                    content {
-                        includeModule("com.theartofdev.edmodo","android-image-cropper")
-                    }
-                }
-    }
+        maven { url "https://jitpack.io" }
+//                {
+//                    content {
+//                        includeModule("com.theartofdev.edmodo","android-image-cropper")
+//                    }
+//                }
+   }
 }
 
 task clean(type: Delete) {
